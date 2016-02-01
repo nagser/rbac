@@ -1,0 +1,32 @@
+{
+    "name": "nagser/rbac",
+    "type": "yii2-extension",
+
+    "description": "This module display information about users rules and right",
+    "keywords": ["nagser"],
+    "license": "GPL-3.0+",
+    "support": {
+        "source": "https://github.com/nagser/rbac"
+    },
+    "authors": [
+        {
+            "name": "NagSer",
+            "email": "tech@eventarium.pro"
+        }
+    ],
+
+    "require": {
+        "yiisoft/yii2": "2.0.*",
+        "nagser/base": "dev-master",
+        "dektrium/yii2-rbac": "^0.1.0"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "nagser\\rbac\\": ""
+        }
+    },
+    "extra": {
+        "bootstrap": "nagser\\rbac\\Bootstrap"
+    }
+}
