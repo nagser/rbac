@@ -1,9 +1,7 @@
 <?php
 
-namespace app\modules\rbac;
+namespace nagser\rbac;
 
-use app\base\CustomModule;
-
-class Module extends CustomModule {
+class Module extends \nagser\base\Module {
 
 }

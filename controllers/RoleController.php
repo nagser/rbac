@@ -1,9 +1,9 @@
 <?php
 
-namespace app\modules\rbac\controllers;
+namespace nagser\rbac\controllers;
 
-use app\base\behaviors\CustomAdminControllerBehavior;
-use app\modules\rbac\Module;
+use nagser\rbac\Module;
+use nagser\base\behaviors\AdminControllerBehavior;
 use yii\filters\AccessControl;
 
 class RoleController extends \dektrium\rbac\controllers\RoleController {
@@ -14,7 +14,7 @@ class RoleController extends \dektrium\rbac\controllers\RoleController {
 	public function behaviors(){
 		return [
 			'controller' => [
-				'class' => CustomAdminControllerBehavior::className(),
+				'class' => AdminControllerBehavior::className(),
 				'module' => Module::className()
 			],
             'access' => [
