@@ -17,7 +17,6 @@ use yii\bootstrap\Nav;
 
 ?>
 
-
 <?= Nav::widget([
 	'activateParents' => true,
 	'options' => [

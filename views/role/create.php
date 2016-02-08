@@ -19,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 ?>
 
-<?php $this->beginContent('@app/modules/rbac/views/layout.php') ?>
+<?php $this->beginContent('@nagser/rbac/views/layout.php') ?>
 
 <?= $this->render('_form', [
     'model' => $model,

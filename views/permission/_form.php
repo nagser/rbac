@@ -14,30 +14,26 @@
  * @var $model dektrium\rbac\models\Role
  */
 
-use kartik\select2\Select2;
-use yii\widgets\ActiveForm;
+use nagser\base\widgets\Select2\Select2;
+use nagser\base\widgets\ActiveForm\ActiveForm;
 use yii\helpers\Html;
 
 ?>
 
 <?php $form = ActiveForm::begin([
     'enableClientValidation' => false,
-    'enableAjaxValidation'   => true,
+    'enableAjaxValidation' => true,
 ]) ?>
-<div class="panel-body bg-light">
-    <?= $form->field($model, 'name') ?>
-    <?= $form->field($model, 'description') ?>
-    <?= $form->field($model, 'rule') ?>
-    <?= $form->field($model, 'children')->widget(Select2::className(), [
-        'data' => $model->getUnassignedItems(),
-        'options' => [
-            'id' => 'children',
-            'multiple' => true
-        ],
-    ]) ?>
-</div>
-<div class="panel-footer">
-    <?= Html::submitButton(Yii::t('rbac', 'Save'), ['class' => 'btn btn-default']) ?>
-</div>
+<?= $form->field($model, 'name') ?>
+<?= $form->field($model, 'description') ?>
+<?= $form->field($model, 'rule') ?>
+<?= $form->field($model, 'children')->widget(Select2::className(), [
+    'data' => $model->getUnassignedItems(),
+    'options' => [
+        'id' => 'children',
+        'multiple' => true
+    ],
+]) ?>
+<?= Html::submitButton(Yii::t('rbac', 'Save'), ['class' => 'btn btn-default']) ?>
 
 <?php ActiveForm::end() ?>
